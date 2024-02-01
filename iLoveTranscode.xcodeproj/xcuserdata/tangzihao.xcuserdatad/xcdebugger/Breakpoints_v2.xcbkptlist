@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F81412C9-15BC-49CF-ACFA-A3B9BE5867C1"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F14B1B3E-A21F-4FF2-9BA0-904ADDCE5E79"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iLoveTranscode/ContentViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "handleQRScan(result:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F14B1B3E-A21F-4FF2-9BA0-904ADDCE5E79 - e4b70d214aaa70ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for iLoveTranscode.ContentView.ViewModel.handleQRScan(result: Swift.Result&lt;CodeScanner.ScanResult, CodeScanner.ScanError&gt;) async -&gt; ()"
+                  moduleName = "iLoveTranscode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tangzihao/Documents/Xcode_Local_Project/iLoveTranscode/iLoveTranscode/ContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "F14B1B3E-A21F-4FF2-9BA0-904ADDCE5E79 - 587e8695545334af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for iLoveTranscode.ContentView.ViewModel.handleQRScan(result: Swift.Result&lt;CodeScanner.ScanResult, CodeScanner.ScanError&gt;) async -&gt; ()"
+                  moduleName = "iLoveTranscode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tangzihao/Documents/Xcode_Local_Project/iLoveTranscode/iLoveTranscode/ContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

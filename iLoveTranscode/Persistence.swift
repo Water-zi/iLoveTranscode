@@ -13,9 +13,14 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+        for index in 0..<10 {
+            let project = Project(context: viewContext)
+            project.name = "Project Name"
+            project.brokerAddress = "info.brokerAddress"
+            project.brokerPort = 1883
+            project.topicAddress = "info.topicAddress"
+            project.addedDate = Date()
+            project.order = Int64(index)
         }
         do {
             try viewContext.save()
@@ -52,5 +57,12 @@ struct PersistenceController {
             }
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
+    }
+}
+
+extension NSManagedObjectContext {
+    func saveContext() {
+        guard hasChanges else { return }
+        try? save()
     }
 }

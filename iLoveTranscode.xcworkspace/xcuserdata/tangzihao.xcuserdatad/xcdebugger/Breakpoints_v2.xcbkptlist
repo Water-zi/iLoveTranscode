@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B8763BCE-D7FA-4D4C-90FF-07D04AE96A52"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F1BD065-B4EC-43C6-AEF9-97F37639CEA5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iLoveTranscode/ProjectDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "connectTo(project:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3F1BD065-B4EC-43C6-AEF9-97F37639CEA5 - e8ddfdbb9408e265"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iLoveTranscode.ProjectDetailView.ViewModel.connectTo(project: iLoveTranscode.Project) -&gt; ()"
+                  moduleName = "iLoveTranscode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tangzihao/Documents/Xcode_Local_Project/iLoveTranscode/iLoveTranscode/ProjectDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1368">
+               </Location>
+               <Location
+                  uuid = "3F1BD065-B4EC-43C6-AEF9-97F37639CEA5 - e8ddfdbb9408e1a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iLoveTranscode.ProjectDetailView.ViewModel.connectTo(project: iLoveTranscode.Project) -&gt; ()"
+                  moduleName = "iLoveTranscode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tangzihao/Documents/Xcode_Local_Project/iLoveTranscode/iLoveTranscode/ProjectDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1348">
+               </Location>
+               <Location
+                  uuid = "3F1BD065-B4EC-43C6-AEF9-97F37639CEA5 - e8ddfdbb9408e1a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iLoveTranscode.ProjectDetailView.ViewModel.connectTo(project: iLoveTranscode.Project) -&gt; ()"
+                  moduleName = "iLoveTranscode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tangzihao/Documents/Xcode_Local_Project/iLoveTranscode/iLoveTranscode/ProjectDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1412">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0795E04-D9AE-4C57-9F13-64AED6D3B2F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iLoveTranscode/ProjectDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "connectTo(project:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3929E3F7-4ADA-4379-A1C1-586E5DEA5E4C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iLoveTranscode/ProjectDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "connectTo(project:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "12C36C62-98CA-44FC-9552-EE26B2A00E05"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iLoveTranscode/ProjectDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "connectTo(project:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "12C36C62-98CA-44FC-9552-EE26B2A00E05 - 757f639d3a452cca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (CocoaMQTT.CocoaMQTT5, CocoaMQTT.CocoaMQTT5Message, Swift.UInt16, Swift.Optional&lt;CocoaMQTT.MqttDecodePublish&gt;) -&gt; () in iLoveTranscode.ProjectDetailView.ViewModel.connectTo(project: iLoveTranscode.Project) -&gt; ()"
+                  moduleName = "iLoveTranscode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tangzihao/Documents/Xcode_Local_Project/iLoveTranscode/iLoveTranscode/ProjectDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "1204">
+               </Location>
+               <Location
+                  uuid = "12C36C62-98CA-44FC-9552-EE26B2A00E05 - 832725c71355ce51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #3 (CocoaMQTT.CocoaMQTT5, CocoaMQTT.CocoaMQTT5Message, Swift.UInt16, Swift.Optional&lt;CocoaMQTT.MqttDecodePublish&gt;) -&gt; () in iLoveTranscode.ProjectDetailView.ViewModel.connectTo(project: iLoveTranscode.Project) -&gt; ()"
+                  moduleName = "iLoveTranscode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tangzihao/Documents/Xcode_Local_Project/iLoveTranscode/iLoveTranscode/ProjectDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7BCF4E75-73DB-40A3-87D2-6DDB35E6C74D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iLoveTranscode/ProjectDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "connectTo(project:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9EE70989-8E5A-418A-966A-A1216BA8148C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iLoveTranscode/ProjectDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "connectTo(project:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

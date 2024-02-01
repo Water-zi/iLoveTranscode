@@ -7,15 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59495037B677AE99113221D3 /* Pods_iLoveTranscode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BF1712A12ACE4BDFBE564 /* Pods_iLoveTranscode.framework */; };
+		6A1D6B632B6BC46B0099C140 /* JobDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D6B622B6BC46B0099C140 /* JobDetailsView.swift */; };
+		6A1D6B652B6BF5910099C140 /* JobDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D6B642B6BF5910099C140 /* JobDetailsModel.swift */; };
+		6A253F182B6967B600130DE9 /* ProjectDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A253F172B6967B600130DE9 /* ProjectDetailViewModel.swift */; };
+		6A334E0A2B6AB29C001DAFD4 /* ProjectInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A334E092B6AB29C001DAFD4 /* ProjectInfoModel.swift */; };
+		6A334E0B2B6AB328001DAFD4 /* ProjectInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A334E092B6AB29C001DAFD4 /* ProjectInfoModel.swift */; };
 		6A3A92722B69476F0025F714 /* iLoveTranscodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3A92712B69476F0025F714 /* iLoveTranscodeApp.swift */; };
 		6A3A92742B69476F0025F714 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3A92732B69476F0025F714 /* ContentView.swift */; };
 		6A3A92762B6947700025F714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A3A92752B6947700025F714 /* Assets.xcassets */; };
 		6A3A92792B6947700025F714 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A3A92782B6947700025F714 /* Preview Assets.xcassets */; };
 		6A3A927B2B6947700025F714 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3A927A2B6947700025F714 /* Persistence.swift */; };
 		6A3A927E2B6947700025F714 /* iLoveTranscode.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A3A927C2B6947700025F714 /* iLoveTranscode.xcdatamodeld */; };
+		6A7312E12B6A8FE3001434F3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7312E02B6A8FE3001434F3 /* WidgetKit.framework */; };
+		6A7312E32B6A8FE3001434F3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7312E22B6A8FE3001434F3 /* SwiftUI.framework */; };
+		6A7312E62B6A8FE3001434F3 /* iLoveTranscodeWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7312E52B6A8FE3001434F3 /* iLoveTranscodeWidgetBundle.swift */; };
+		6A7312E82B6A8FE3001434F3 /* iLoveTranscodeWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7312E72B6A8FE3001434F3 /* iLoveTranscodeWidgetLiveActivity.swift */; };
+		6A7312EA2B6A8FE3001434F3 /* iLoveTranscodeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7312E92B6A8FE3001434F3 /* iLoveTranscodeWidget.swift */; };
+		6A7312EC2B6A8FE5001434F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7312EB2B6A8FE5001434F3 /* Assets.xcassets */; };
+		6A7312F02B6A8FE5001434F3 /* iLoveTranscodeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6A7312DF2B6A8FE3001434F3 /* iLoveTranscodeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6A7312F82B6A9191001434F3 /* iLoveTranscodeWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7312F72B6A9191001434F3 /* iLoveTranscodeWidgetAttributes.swift */; };
+		6A7312F92B6A9191001434F3 /* iLoveTranscodeWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7312F72B6A9191001434F3 /* iLoveTranscodeWidgetAttributes.swift */; };
+		6A7312FB2B6A9224001434F3 /* JobBasicInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7312FA2B6A9224001434F3 /* JobBasicInfoModel.swift */; };
+		6A7312FC2B6A9224001434F3 /* JobBasicInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7312FA2B6A9224001434F3 /* JobBasicInfoModel.swift */; };
+		6A7577382B6AC1E5006336DD /* RenderJobProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC2D4022B6A7570003F38F4 /* RenderJobProgressView.swift */; };
+		6A75773A2B6B8B57006336DD /* WidgetJobsCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7577392B6B8B57006336DD /* WidgetJobsCircleProgressView.swift */; };
+		6A75773B2B6B90AD006336DD /* WidgetJobsCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7577392B6B8B57006336DD /* WidgetJobsCircleProgressView.swift */; };
+		6A75773D2B6BAC46006336DD /* CustomExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A75773C2B6BAC46006336DD /* CustomExtensions.swift */; };
+		6AC2D4032B6A7570003F38F4 /* RenderJobProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC2D4022B6A7570003F38F4 /* RenderJobProgressView.swift */; };
+		6AD24EA62B6C1079004A67C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7312EB2B6A8FE5001434F3 /* Assets.xcassets */; };
+		6AED4AFD2B6951990058B2D0 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 6AED4AFC2B6951990058B2D0 /* CodeScanner */; };
+		6AED4AFF2B695BD30058B2D0 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED4AFE2B695BD30058B2D0 /* ContentViewModel.swift */; };
+		6AED4B012B6963CC0058B2D0 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED4B002B6963CC0058B2D0 /* ProjectDetailView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6A7312EE2B6A8FE5001434F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A3A92662B69476E0025F714 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A7312DE2B6A8FE3001434F3;
+			remoteInfo = iLoveTranscodeWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6A7312F12B6A8FE5001434F3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6A7312F02B6A8FE5001434F3 /* iLoveTranscodeWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6A1D6B622B6BC46B0099C140 /* JobDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsView.swift; sourceTree = "<group>"; };
+		6A1D6B642B6BF5910099C140 /* JobDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsModel.swift; sourceTree = "<group>"; };
+		6A253F172B6967B600130DE9 /* ProjectDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModel.swift; sourceTree = "<group>"; };
+		6A334E092B6AB29C001DAFD4 /* ProjectInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectInfoModel.swift; sourceTree = "<group>"; };
 		6A3A926E2B69476F0025F714 /* iLoveTranscode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLoveTranscode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3A92712B69476F0025F714 /* iLoveTranscodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLoveTranscodeApp.swift; sourceTree = "<group>"; };
 		6A3A92732B69476F0025F714 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,6 +79,24 @@
 		6A3A927D2B6947700025F714 /* iLoveTranscode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iLoveTranscode.xcdatamodel; sourceTree = "<group>"; };
 		6A3A927F2B6947700025F714 /* iLoveTranscode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iLoveTranscode.entitlements; sourceTree = "<group>"; };
 		6A3A92802B6947700025F714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A7312DF2B6A8FE3001434F3 /* iLoveTranscodeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iLoveTranscodeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7312E02B6A8FE3001434F3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		6A7312E22B6A8FE3001434F3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		6A7312E52B6A8FE3001434F3 /* iLoveTranscodeWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLoveTranscodeWidgetBundle.swift; sourceTree = "<group>"; };
+		6A7312E72B6A8FE3001434F3 /* iLoveTranscodeWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLoveTranscodeWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		6A7312E92B6A8FE3001434F3 /* iLoveTranscodeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLoveTranscodeWidget.swift; sourceTree = "<group>"; };
+		6A7312EB2B6A8FE5001434F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A7312ED2B6A8FE5001434F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A7312F72B6A9191001434F3 /* iLoveTranscodeWidgetAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLoveTranscodeWidgetAttributes.swift; sourceTree = "<group>"; };
+		6A7312FA2B6A9224001434F3 /* JobBasicInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobBasicInfoModel.swift; sourceTree = "<group>"; };
+		6A7577392B6B8B57006336DD /* WidgetJobsCircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetJobsCircleProgressView.swift; sourceTree = "<group>"; };
+		6A75773C2B6BAC46006336DD /* CustomExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExtensions.swift; sourceTree = "<group>"; };
+		6AC2D4022B6A7570003F38F4 /* RenderJobProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderJobProgressView.swift; sourceTree = "<group>"; };
+		6AED4AFE2B695BD30058B2D0 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		6AED4B002B6963CC0058B2D0 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		6FA501AE71FD56FE81E1180E /* Pods-iLoveTranscode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLoveTranscode.debug.xcconfig"; path = "Target Support Files/Pods-iLoveTranscode/Pods-iLoveTranscode.debug.xcconfig"; sourceTree = "<group>"; };
+		AA7A831BF6EA97682527AC67 /* Pods-iLoveTranscode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLoveTranscode.release.xcconfig"; path = "Target Support Files/Pods-iLoveTranscode/Pods-iLoveTranscode.release.xcconfig"; sourceTree = "<group>"; };
+		E05BF1712A12ACE4BDFBE564 /* Pods_iLoveTranscode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iLoveTranscode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +104,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AED4AFD2B6951990058B2D0 /* CodeScanner in Frameworks */,
+				59495037B677AE99113221D3 /* Pods_iLoveTranscode.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A7312DC2B6A8FE3001434F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A7312E32B6A8FE3001434F3 /* SwiftUI.framework in Frameworks */,
+				6A7312E12B6A8FE3001434F3 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B767C6CB7FF76C0B72C4E5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6FA501AE71FD56FE81E1180E /* Pods-iLoveTranscode.debug.xcconfig */,
+				AA7A831BF6EA97682527AC67 /* Pods-iLoveTranscode.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6A1D6B602B6BC4310099C140 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6A3A92732B69476F0025F714 /* ContentView.swift */,
+				6AED4AFE2B695BD30058B2D0 /* ContentViewModel.swift */,
+				6AED4B002B6963CC0058B2D0 /* ProjectDetailView.swift */,
+				6A253F172B6967B600130DE9 /* ProjectDetailViewModel.swift */,
+				6A1D6B622B6BC46B0099C140 /* JobDetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6A1D6B612B6BC43E0099C140 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6A7312FA2B6A9224001434F3 /* JobBasicInfoModel.swift */,
+				6A334E092B6AB29C001DAFD4 /* ProjectInfoModel.swift */,
+				6A1D6B642B6BF5910099C140 /* JobDetailsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6A3A92652B69476E0025F714 = {
 			isa = PBXGroup;
 			children = (
 				6A3A92702B69476F0025F714 /* iLoveTranscode */,
+				6A7312E42B6A8FE3001434F3 /* iLoveTranscodeWidget */,
 				6A3A926F2B69476F0025F714 /* Products */,
+				1B767C6CB7FF76C0B72C4E5F /* Pods */,
+				D97BDE0AC163EBAAD0FC4D0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				6A3A926E2B69476F0025F714 /* iLoveTranscode.app */,
+				6A7312DF2B6A8FE3001434F3 /* iLoveTranscodeWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,12 +176,15 @@
 			isa = PBXGroup;
 			children = (
 				6A3A92712B69476F0025F714 /* iLoveTranscodeApp.swift */,
-				6A3A92732B69476F0025F714 /* ContentView.swift */,
+				6A75773C2B6BAC46006336DD /* CustomExtensions.swift */,
+				6A1D6B602B6BC4310099C140 /* Views */,
+				6A1D6B612B6BC43E0099C140 /* Models */,
 				6A3A92752B6947700025F714 /* Assets.xcassets */,
 				6A3A927A2B6947700025F714 /* Persistence.swift */,
 				6A3A927F2B6947700025F714 /* iLoveTranscode.entitlements */,
 				6A3A92802B6947700025F714 /* Info.plist */,
 				6A3A927C2B6947700025F714 /* iLoveTranscode.xcdatamodeld */,
+				6AC2D4012B6A755E003F38F4 /* CustomViews */,
 				6A3A92772B6947700025F714 /* Preview Content */,
 			);
 			path = iLoveTranscode;
@@ -77,6 +198,38 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6A7312E42B6A8FE3001434F3 /* iLoveTranscodeWidget */ = {
+			isa = PBXGroup;
+			children = (
+				6A7312E52B6A8FE3001434F3 /* iLoveTranscodeWidgetBundle.swift */,
+				6A7312E72B6A8FE3001434F3 /* iLoveTranscodeWidgetLiveActivity.swift */,
+				6A7312F72B6A9191001434F3 /* iLoveTranscodeWidgetAttributes.swift */,
+				6A7312E92B6A8FE3001434F3 /* iLoveTranscodeWidget.swift */,
+				6A7312EB2B6A8FE5001434F3 /* Assets.xcassets */,
+				6A7312ED2B6A8FE5001434F3 /* Info.plist */,
+			);
+			path = iLoveTranscodeWidget;
+			sourceTree = "<group>";
+		};
+		6AC2D4012B6A755E003F38F4 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				6AC2D4022B6A7570003F38F4 /* RenderJobProgressView.swift */,
+				6A7577392B6B8B57006336DD /* WidgetJobsCircleProgressView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		D97BDE0AC163EBAAD0FC4D0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E05BF1712A12ACE4BDFBE564 /* Pods_iLoveTranscode.framework */,
+				6A7312E02B6A8FE3001434F3 /* WidgetKit.framework */,
+				6A7312E22B6A8FE3001434F3 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -84,18 +237,42 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A3A92832B6947700025F714 /* Build configuration list for PBXNativeTarget "iLoveTranscode" */;
 			buildPhases = (
+				67A30FB23E979864945F12B5 /* [CP] Check Pods Manifest.lock */,
 				6A3A926A2B69476E0025F714 /* Sources */,
 				6A3A926B2B69476E0025F714 /* Frameworks */,
 				6A3A926C2B69476E0025F714 /* Resources */,
+				6960A70FDE9888B3550C254D /* [CP] Embed Pods Frameworks */,
+				6A7312F12B6A8FE5001434F3 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A7312EF2B6A8FE5001434F3 /* PBXTargetDependency */,
+			);
+			name = iLoveTranscode;
+			packageProductDependencies = (
+				6AED4AFC2B6951990058B2D0 /* CodeScanner */,
+			);
+			productName = iLoveTranscode;
+			productReference = 6A3A926E2B69476F0025F714 /* iLoveTranscode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6A7312DE2B6A8FE3001434F3 /* iLoveTranscodeWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A7312F42B6A8FE5001434F3 /* Build configuration list for PBXNativeTarget "iLoveTranscodeWidgetExtension" */;
+			buildPhases = (
+				6A7312DB2B6A8FE3001434F3 /* Sources */,
+				6A7312DC2B6A8FE3001434F3 /* Frameworks */,
+				6A7312DD2B6A8FE3001434F3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = iLoveTranscode;
-			productName = iLoveTranscode;
-			productReference = 6A3A926E2B69476F0025F714 /* iLoveTranscode.app */;
-			productType = "com.apple.product-type.application";
+			name = iLoveTranscodeWidgetExtension;
+			productName = iLoveTranscodeWidgetExtension;
+			productReference = 6A7312DF2B6A8FE3001434F3 /* iLoveTranscodeWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -110,6 +287,9 @@
 					6A3A926D2B69476E0025F714 = {
 						CreatedOnToolsVersion = 15.2;
 					};
+					6A7312DE2B6A8FE3001434F3 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 				};
 			};
 			buildConfigurationList = 6A3A92692B69476E0025F714 /* Build configuration list for PBXProject "iLoveTranscode" */;
@@ -121,11 +301,15 @@
 				Base,
 			);
 			mainGroup = 6A3A92652B69476E0025F714;
+			packageReferences = (
+				6AED4AFB2B6951990058B2D0 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 6A3A926F2B69476F0025F714 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6A3A926D2B69476E0025F714 /* iLoveTranscode */,
+				6A7312DE2B6A8FE3001434F3 /* iLoveTranscodeWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -136,25 +320,110 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A3A92792B6947700025F714 /* Preview Assets.xcassets in Resources */,
+				6AD24EA62B6C1079004A67C8 /* Assets.xcassets in Resources */,
 				6A3A92762B6947700025F714 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6A7312DD2B6A8FE3001434F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A7312EC2B6A8FE5001434F3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67A30FB23E979864945F12B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iLoveTranscode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6960A70FDE9888B3550C254D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iLoveTranscode/Pods-iLoveTranscode-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iLoveTranscode/Pods-iLoveTranscode-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iLoveTranscode/Pods-iLoveTranscode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A3A926A2B69476E0025F714 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A334E0A2B6AB29C001DAFD4 /* ProjectInfoModel.swift in Sources */,
+				6A7312FB2B6A9224001434F3 /* JobBasicInfoModel.swift in Sources */,
 				6A3A927B2B6947700025F714 /* Persistence.swift in Sources */,
+				6AC2D4032B6A7570003F38F4 /* RenderJobProgressView.swift in Sources */,
+				6A1D6B652B6BF5910099C140 /* JobDetailsModel.swift in Sources */,
+				6A7312F82B6A9191001434F3 /* iLoveTranscodeWidgetAttributes.swift in Sources */,
+				6A75773D2B6BAC46006336DD /* CustomExtensions.swift in Sources */,
+				6A75773B2B6B90AD006336DD /* WidgetJobsCircleProgressView.swift in Sources */,
 				6A3A927E2B6947700025F714 /* iLoveTranscode.xcdatamodeld in Sources */,
 				6A3A92742B69476F0025F714 /* ContentView.swift in Sources */,
 				6A3A92722B69476F0025F714 /* iLoveTranscodeApp.swift in Sources */,
+				6AED4AFF2B695BD30058B2D0 /* ContentViewModel.swift in Sources */,
+				6A253F182B6967B600130DE9 /* ProjectDetailViewModel.swift in Sources */,
+				6AED4B012B6963CC0058B2D0 /* ProjectDetailView.swift in Sources */,
+				6A1D6B632B6BC46B0099C140 /* JobDetailsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A7312DB2B6A8FE3001434F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A7312FC2B6A9224001434F3 /* JobBasicInfoModel.swift in Sources */,
+				6A7312F92B6A9191001434F3 /* iLoveTranscodeWidgetAttributes.swift in Sources */,
+				6A7312E82B6A8FE3001434F3 /* iLoveTranscodeWidgetLiveActivity.swift in Sources */,
+				6A334E0B2B6AB328001DAFD4 /* ProjectInfoModel.swift in Sources */,
+				6A7577382B6AC1E5006336DD /* RenderJobProgressView.swift in Sources */,
+				6A75773A2B6B8B57006336DD /* WidgetJobsCircleProgressView.swift in Sources */,
+				6A7312EA2B6A8FE3001434F3 /* iLoveTranscodeWidget.swift in Sources */,
+				6A7312E62B6A8FE3001434F3 /* iLoveTranscodeWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6A7312EF2B6A8FE5001434F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A7312DE2B6A8FE3001434F3 /* iLoveTranscodeWidgetExtension */;
+			targetProxy = 6A7312EE2B6A8FE5001434F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6A3A92812B6947700025F714 /* Debug */ = {
@@ -278,22 +547,29 @@
 		};
 		6A3A92842B6947700025F714 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FA501AE71FD56FE81E1180E /* Pods-iLoveTranscode.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = iLoveTranscode/iLoveTranscode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iLoveTranscode/Preview Content\"";
 				DEVELOPMENT_TEAM = ZVDC8DS264;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iLoveTranscode/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,22 +585,29 @@
 		};
 		6A3A92852B6947700025F714 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA7A831BF6EA97682527AC67 /* Pods-iLoveTranscode.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = iLoveTranscode/iLoveTranscode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iLoveTranscode/Preview Content\"";
 				DEVELOPMENT_TEAM = ZVDC8DS264;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iLoveTranscode/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +615,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.water-zi.iLoveTranscode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6A7312F22B6A8FE5001434F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZVDC8DS264;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iLoveTranscodeWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iLoveTranscodeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.water-zi.iLoveTranscode.iLoveTranscodeWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6A7312F32B6A8FE5001434F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZVDC8DS264;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iLoveTranscodeWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iLoveTranscodeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.water-zi.iLoveTranscode.iLoveTranscodeWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,7 +696,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6A7312F42B6A8FE5001434F3 /* Build configuration list for PBXNativeTarget "iLoveTranscodeWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A7312F22B6A8FE5001434F3 /* Debug */,
+				6A7312F32B6A8FE5001434F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6AED4AFB2B6951990058B2D0 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6AED4AFC2B6951990058B2D0 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AED4AFB2B6951990058B2D0 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6A3A927C2B6947700025F714 /* iLoveTranscode.xcdatamodeld */ = {
