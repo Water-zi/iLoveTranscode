@@ -8,5 +8,6 @@ target 'iLoveTranscode' do
   # Pods for iLoveTranscode
   pod 'CocoaMQTT'
   pod 'Starscream', '~> 4.0.6'
+  pod 'NotificationBannerSwift', '~> 3.0.0'
 
 end

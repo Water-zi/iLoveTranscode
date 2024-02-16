@@ -9,6 +9,7 @@
         <attribute name="brokerPort" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="privateKey" optional="YES" attributeType="String"/>
         <attribute name="topicAddress" optional="YES" attributeType="String"/>
     </entity>
 </model>

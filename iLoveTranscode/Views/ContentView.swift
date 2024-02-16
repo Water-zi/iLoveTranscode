@@ -63,9 +63,6 @@ struct ContentView: View {
                                 Text("删除")
                             }
                         }
-                        .onTapGesture {
-                            viewModel.showProjectDetailView.toggle()
-                        }
                     }
                 }
                 
@@ -97,6 +94,19 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("任务列表")
+//            .toolbar {
+//                ToolbarItem(placement: .topBarTrailing) {
+//                    Button(action: {
+//                        let str = "hello, pp."
+//                        let es = TransmitEncryption.encryptStringWithKey(str)!
+//                        print(es)
+//                        let ds = TransmitEncryption.decryptStringWithKey(es)!
+//                        print(ds)
+//                    }, label: {
+//                        Text("复制推送密钥")
+//                    })
+//                }
+//            }
         }
     }
 }

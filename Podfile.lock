@@ -3,24 +3,36 @@ PODS:
     - CocoaMQTT/Core (= 2.1.6)
   - CocoaMQTT/Core (2.1.6):
     - MqttCocoaAsyncSocket (~> 1.0.8)
+  - MarqueeLabel (4.0.5)
   - MqttCocoaAsyncSocket (1.0.8)
+  - NotificationBannerSwift (3.0.6):
+    - MarqueeLabel (~> 4.0.5)
+    - SnapKit (~> 5.0.1)
+  - SnapKit (5.0.1)
   - Starscream (4.0.6)
 
 DEPENDENCIES:
   - CocoaMQTT
+  - NotificationBannerSwift (~> 3.0.0)
   - Starscream (~> 4.0.6)
 
 SPEC REPOS:
   trunk:
     - CocoaMQTT
+    - MarqueeLabel
     - MqttCocoaAsyncSocket
+    - NotificationBannerSwift
+    - SnapKit
     - Starscream
 
 SPEC CHECKSUMS:
   CocoaMQTT: 1f206228b29318eabdacad0c2e4e88575922c27a
+  MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
   MqttCocoaAsyncSocket: 77d3b74f76228dd5a05d1f9526eab101d415b30c
+  NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Starscream: fb2c4510bebf908c62bd383bcf05e673720e91fd
 
-PODFILE CHECKSUM: deeee2c7a2006bccd2d739490d087962ddd622a9
+PODFILE CHECKSUM: bf29d60dec5d60db6b4d15dbc506666636411c68
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.0

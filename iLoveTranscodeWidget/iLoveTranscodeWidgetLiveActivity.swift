@@ -66,7 +66,7 @@ struct iLoveTranscodeWidgetLiveActivity: Widget {
                 }
             }
             .padding()
-//            .activityBackgroundTint(Color.)
+            .activityBackgroundTint(Color.secondary)
             .activitySystemActionForegroundColor(Color.black)
 
         } dynamicIsland: { context in
@@ -132,7 +132,6 @@ struct iLoveTranscodeWidgetLiveActivity: Widget {
                         .font(.system(size: 10))
                 }
                 .padding(2)
-                .padding(.trailing, 3)
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
@@ -148,11 +147,11 @@ extension iLoveTranscodeWidgetAttributes {
 
 extension iLoveTranscodeWidgetAttributes.ContentState {
     fileprivate static var first: iLoveTranscodeWidgetAttributes.ContentState {
-        iLoveTranscodeWidgetAttributes.ContentState(readyJobNumber: 5, failedJobNumber: 0, finishJobNumber: 0, isRendering: false, lastUpdate: Date(), currentJobId: UUID().uuidString, currentJobName: "Preview Job 1", currentTimelineName: "PT1", currentJobStatus: .ready, currentJobProgress: 0, currentJobDurationString: "剩余时间 -")
+        iLoveTranscodeWidgetAttributes.ContentState(readyJobNumber: 5, failedJobNumber: 0, finishJobNumber: 0, isRendering: false, lastUpdate: Date(), currentJobId: UUID().uuidString, currentJobName: "Preview Job 1", currentTimelineName: "PT1", currentJobStatus: .ready, currentJobProgress: 0, currentJobDurationString: "未知...")
     }
     
     fileprivate static var second: iLoveTranscodeWidgetAttributes.ContentState {
-        iLoveTranscodeWidgetAttributes.ContentState(readyJobNumber: 2, failedJobNumber: 1, finishJobNumber: 2, isRendering: false, lastUpdate: Date(), currentJobId: UUID().uuidString, currentJobName: "Preview Job 2", currentTimelineName: "PT1", currentJobStatus: .ready, currentJobProgress: 80, currentJobDurationString: "剩余时间 5s")
+        iLoveTranscodeWidgetAttributes.ContentState(readyJobNumber: 2, failedJobNumber: 1, finishJobNumber: 2, isRendering: false, lastUpdate: Date(), currentJobId: UUID().uuidString, currentJobName: "Preview Job 2", currentTimelineName: "PT1", currentJobStatus: .ready, currentJobProgress: 80, currentJobDurationString: "5s")
     }
 }
 

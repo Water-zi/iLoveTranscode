@@ -33,12 +33,12 @@ struct ProjectInfoToWidget: Codable, Identifiable, Hashable {
     var finishJobNumber: Int
     var isRendering: Bool
     
-    var lastUpdate: Date
+    var lastUpdate: Date?
     
     var currentJobId: String
     var currentJobName: String
     var currentTimelineName: String
-    var currentJobStatus: JobStatus
+    var currentJobStatus: JobStatus = .ready
     var currentJobProgress: Int
     var currentJobDurationString: String
 }
