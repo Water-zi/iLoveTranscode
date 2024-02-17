@@ -20,8 +20,8 @@ struct iLoveTranscodeWidgetLiveActivity: Widget {
                     Spacer()
                     Image(systemName: "timer")
                         .font(.system(size: 12))
-//                    Text("\(context.state.wrappedRenderJob().intervalSinceLastUpdate())")
-//                        .font(.system(size: 12))
+                    //                    Text("\(context.state.wrappedRenderJob().intervalSinceLastUpdate())")
+                    //                        .font(.system(size: 12))
                 }
                 Divider()
                     .padding(.bottom, 5)
@@ -68,7 +68,7 @@ struct iLoveTranscodeWidgetLiveActivity: Widget {
             .padding()
             .activityBackgroundTint(Color.secondary)
             .activitySystemActionForegroundColor(Color.black)
-
+            
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded UI goes here.  Compose the expanded UI through
@@ -115,15 +115,18 @@ struct iLoveTranscodeWidgetLiveActivity: Widget {
                     .padding(.vertical, 2)
                 }
             } compactLeading: {
-                    WidgetJobsCircleProgressView(readyJobsCount: context.state.readyJobNumber, failedJobsCount: context.state.failedJobNumber, finishJobsCount: context.state.finishJobNumber, strokeWidth: 8)
-                .padding(2)
+                ZStack {
+                    Image(systemName: context.state.isRendering ? "heat.waves" : "moon.zzz")
+                        .bold()
+                        .font(.system(size: 12))
+//                        .padding(4)
+//                        .padding(.leading, 3)
+                    WidgetJobsCircleProgressView(readyJobsCount: context.state.readyJobNumber, failedJobsCount: context.state.failedJobNumber, finishJobsCount: context.state.finishJobNumber, strokeWidth: 2)
+//                        .padding(2)
+                }
                 .padding(.trailing, 3)
             } compactTrailing: {
-                Image(systemName: context.state.isRendering ? "heat.waves" : "moon.zzz")
-                    .bold()
-                    .font(.system(size: 18))
-                    .padding(2)
-                    .padding(.leading, 3)
+                Text(context.state.currentJobDurationString)
             } minimal: {
                 ZStack {
                     WidgetJobsCircleProgressView(readyJobsCount: context.state.readyJobNumber, failedJobsCount: context.state.failedJobNumber, finishJobsCount: context.state.finishJobNumber, strokeWidth: 5)
@@ -156,7 +159,7 @@ extension iLoveTranscodeWidgetAttributes.ContentState {
 }
 
 #Preview("Notification", as: .content, using: iLoveTranscodeWidgetAttributes.preview) {
-   iLoveTranscodeWidgetLiveActivity()
+    iLoveTranscodeWidgetLiveActivity()
 } contentStates: {
     iLoveTranscodeWidgetAttributes.ContentState.first
     iLoveTranscodeWidgetAttributes.ContentState.second

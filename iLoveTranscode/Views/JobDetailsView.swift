@@ -24,9 +24,9 @@ struct JobDetailsView: View {
                         HStack {
                             Text("任务ID")
                             Spacer(minLength: 10)
-                            Text(jobDetails.jobId)
+                            Text(jobId)
                                 .foregroundStyle(.secondary)
-                                .lineLimit(2)
+                                .lineLimit(1)
                                 .minimumScaleFactor(0.2)
                                 .multilineTextAlignment(.trailing)
                         }

@@ -45,6 +45,7 @@ extension ContentView {
                     if project == nil {
                         project = Project(context: viewContent)
                         newProject = true
+                        project?.order = Int64(projectCount)
                     }
                     project?.name = info.projectName
                     project?.brokerAddress = info.brokerAddress
@@ -52,7 +53,6 @@ extension ContentView {
                     project?.topicAddress = info.topicAddress
                     project?.privateKey = info.privateKey
                     project?.addedDate = Date()
-                    project?.order = Int64(projectCount)
                     viewContent.saveContext()
                     showScannerView = false
                     

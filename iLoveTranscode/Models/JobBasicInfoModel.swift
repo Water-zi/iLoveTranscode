@@ -33,7 +33,7 @@ struct JobBasicInfo: Codable, Identifiable, Hashable {
         case order = "od"
     }
     
-    func formatedJobDuration() -> String {
+    func formatedJobDuration(rendering: Bool) -> String {
         var duration = 0
         if jobStatus == .rendering {
             duration = estimatedTime
@@ -46,13 +46,17 @@ struct JobBasicInfo: Codable, Identifiable, Hashable {
         let seconds = totalSeconds % 60
 
         if hours > 0 {
-            return String(format: "%01dh%01dm%01ds", hours, minutes, seconds)
+            return String(format: "%01dh%01dm", hours, minutes)
         } else if minutes > 0 {
             return String(format: "%01dm%01ds", minutes, seconds)
         } else if seconds > 0 {
             return String(format: "%01ds", seconds)
         } else {
-            return "未知..."
+            if rendering {
+                return "计算中"
+            } else {
+                return "待机"
+            }
         }
     }
     

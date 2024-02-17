@@ -7,6 +7,7 @@
 
 import ActivityKit
 import SwiftUI
+import CodeScanner
 
 struct ProjectDetailView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -16,15 +17,6 @@ struct ProjectDetailView: View {
     
     var body: some View {
         ZStack {
-            if !viewModel.didReceiveMessageFromMQTT {
-                VStack(spacing: 10) {
-                    ProgressView()
-                    Text(viewModel.didConnectToMQTT ? "正在等待服务器消息..." : "正在连接服务器...")
-                }
-                .padding()
-                .background(.bar)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-            }
             List(viewModel.jobList.values.sorted(by: { $0.order < $1.order }), id: \.jobId) { job in
                 Section {
                     VStack {
@@ -38,7 +30,7 @@ struct ProjectDetailView: View {
                                 .foregroundStyle(.secondary)
                         }
                         Divider()
-                        Text("\(job.jobStatus == .rendering ? "剩余时间" : "任务耗时")：\(job.formatedJobDuration())")
+                        Text("\(job.jobStatus == .rendering ? "剩余时间" : "任务耗时")：\(job.formatedJobDuration(rendering: job.jobStatus == .rendering))")
                             .frame(maxWidth: .infinity, alignment: .trailing)
                             .padding(.top, 3)
                             .font(.system(size: 15, weight: .light))
@@ -100,6 +92,47 @@ struct ProjectDetailView: View {
                 JobDetailsView(jobId: viewModel.selectedJobDetailId)
                     .environmentObject(viewModel)
             })
+            
+            if !viewModel.didReceiveMessageFromMQTT {
+                VStack(spacing: 10) {
+                    ProgressView()
+                    Text(viewModel.didConnectToMQTT ? "正在等待服务器消息..." : "正在连接服务器...")
+                }
+                .padding()
+                .background(.bar)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+            if viewModel.unknownMessageCount > 3 {
+                VStack {
+                    Spacer()
+                    VStack(spacing: 10) {
+                        Text("收到的消息不能解析\n如已更新发射端密钥，请扫描二维码以更新项目")
+                            .lineSpacing(5)
+                            .font(.system(size: 13))
+                            .multilineTextAlignment(.center)
+                        Button(action: {
+                            viewModel.showScannerView = true
+                        }, label: {
+                            Image(systemName: "qrcode.viewfinder")
+                                .font(.system(size: 15))
+                            Text("扫描二维码")
+                                .font(.system(size: 15))
+                        })
+                        .sheet(isPresented: $viewModel.showScannerView, content: {
+                            CodeScannerView(codeTypes: [.qr], completion: { result in
+                                Task {
+                                    await viewModel.handleQRScan(result: result)
+                                }
+                            })
+                            .ignoresSafeArea()
+                        })
+                    }
+                    .padding()
+                    .background(.bar)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding(.bottom, 30)
+                }
+            }
         }
     }
 }
