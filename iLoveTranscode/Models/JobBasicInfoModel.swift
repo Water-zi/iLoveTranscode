@@ -127,3 +127,13 @@ struct RemoveJobInfo: Codable {
         case removedJobId = "rji"
     }
 }
+
+struct StartJob: Codable {
+    var jobId: String
+    var date: Date
+    
+    enum CodingKeys: String, CodingKey {
+        case jobId = "id"
+        case date = "d"
+    }
+}

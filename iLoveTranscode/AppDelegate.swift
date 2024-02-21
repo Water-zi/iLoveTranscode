@@ -42,6 +42,10 @@ extension iLoveTranscodeAppDelegate: UNUserNotificationCenterDelegate {
         if notification.request.content.threadIdentifier == "ConnectionEstablishedNotification" {
             completionHandler([])
             return
+        } else if notification.request.content.threadIdentifier == "EndOfRenderNotification" ||
+                    notification.request.content.threadIdentifier == "ServerQuitNotification"
+        {
+            completionHandler([.list, .banner, .sound])
         }
         completionHandler([.list, .banner, .sound])
     }

@@ -190,9 +190,14 @@ extension ProjectDetailView {
         
         func requestStartRender(for jobId: String) {
             guard let mqtt5 = mqtt5 else { return }
+            let startRenderJob = StartJob(jobId: jobId, date: Date())
+            guard let data = try? JSONEncoder().encode(startRenderJob),
+                  let dataStr = String(data: data, encoding: .utf8)
+            else { return }
+            
             let publishProperties = MqttPublishProperties()
             publishProperties.contentType = "String"
-            mqtt5.publish("\(project?.topicAddress ?? "unknown")/inverse", withString: "srn@\(jobId)".encrypt(), properties: publishProperties)
+            mqtt5.publish("\(project?.topicAddress ?? "unknown")/inverse", withString: dataStr.encrypt(), properties: publishProperties)
         }
         
         func start() {
