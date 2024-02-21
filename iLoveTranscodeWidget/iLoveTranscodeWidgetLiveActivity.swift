@@ -66,7 +66,7 @@ struct iLoveTranscodeWidgetLiveActivity: Widget {
                 }
             }
             .padding()
-            .activityBackgroundTint(Color.secondary)
+            .activityBackgroundTint(nil)
             .activitySystemActionForegroundColor(Color.black)
             
         } dynamicIsland: { context in

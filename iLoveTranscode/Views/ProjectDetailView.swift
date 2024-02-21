@@ -13,6 +13,10 @@ struct ProjectDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject private var viewModel = ViewModel()
     
+    @State private var showStartRenderConfirmAlert: Bool = false
+    @State private var showStartRenderBusyAlert: Bool = false
+    @State private var startRenderJob: JobBasicInfo?
+    
     var project: Project
     
     var body: some View {
@@ -43,6 +47,35 @@ struct ProjectDetailView: View {
                                 .foregroundStyle(job.jobStatus.color)
                                 .frame(minWidth: 50, alignment: .trailing)
                         }
+                        .swipeActions(allowsFullSwipe: false) {
+                            Button(action: {
+                                guard viewModel.jobList.values.filter({ $0.jobStatus == .rendering }).count == 0
+                                else {
+                                    print("busy")
+                                    showStartRenderBusyAlert = true
+                                    return
+                                }
+                                startRenderJob = job
+                                showStartRenderConfirmAlert = true
+                            }, label: {
+                                VStack {
+                                    Image(systemName: "play")
+                                    Text("渲染")
+                                }
+                            })
+                            .tint(.green)
+                            
+                            Button(action: {
+                                viewModel.selectedJobDetailId = job.jobId
+                                viewModel.showJobDetailView.toggle()
+                            }, label: {
+                                VStack() {
+                                    Image(systemName: "info.circle")
+                                    Text("任务详情")
+                                }
+                            })
+                            .tint(.blue)
+                        }
                     }
                     .padding(.vertical, 5)
                 } header: {
@@ -56,9 +89,27 @@ struct ProjectDetailView: View {
                             Image(systemName: "info.circle")
                                 .font(.system(size: 15))
                         })
+                        Button(action: {
+                            guard viewModel.jobList.values.filter({ $0.jobStatus == .rendering }).count == 0
+                            else {
+                                print("busy")
+                                showStartRenderBusyAlert = true
+                                return
+                            }
+                            startRenderJob = job
+                            showStartRenderConfirmAlert = true
+                        }, label: {
+                            Image(systemName: "play")
+                                .font(.system(size: 15))
+                        })
                     }
                 }
             }
+            .refreshable {
+                viewModel.didReceiveMessageFromMQTT = false
+                viewModel.removeAllJobInList()
+            }
+            .animation(.easeInOut, value: viewModel.jobList)
             .task {
                 viewModel.connectTo(project: project)
             }
@@ -92,6 +143,30 @@ struct ProjectDetailView: View {
                 JobDetailsView(jobId: viewModel.selectedJobDetailId)
                     .environmentObject(viewModel)
             })
+            .alert("开始渲染", isPresented: $showStartRenderConfirmAlert, presenting: startRenderJob) { job in
+                Button(role: .cancel) {
+                } label: {
+                    Text("取消")
+                }
+                
+                Button(role: .destructive) {
+                    viewModel.requestStartRender(for: job.jobId)
+                } label: {
+                    Text("确认")
+                }
+            } message: { job in
+                Text("将会开始渲染任务：\(job.jobName)\n已存在的文件会被覆盖。")
+            }
+            .alert("达芬奇正忙", isPresented: $showStartRenderBusyAlert) {
+                Button {
+                    
+                } label: {
+                    Text("好的")
+                }
+
+            } message: {
+                Text("达芬奇有正在渲染的任务，请等待渲染结束后再试。")
+            }
             
             if !viewModel.didReceiveMessageFromMQTT {
                 VStack(spacing: 10) {

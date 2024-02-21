@@ -23,7 +23,7 @@ extension ProjectDetailView {
         var project: Project?
         var mqtt5: CocoaMQTT5?
         var activity: Activity<iLoveTranscodeWidgetAttributes>?
-//        @Published var canSubscribe: Bool = false
+        //        @Published var canSubscribe: Bool = false
         
         @Published private(set) var jobList: [String : JobBasicInfo] = [:]
         @Published private(set) var projectInfo: ProjectInfoFromMQTT = ProjectInfoFromMQTT(readyJobNumber: 0, failedJobNumber: 0, finishJobNumber: 0, currentJobId: UUID().uuidString, isRendering: false)
@@ -106,58 +106,62 @@ extension ProjectDetailView {
                 if var jobBasicInfo = try? decoder.decode(JobBasicInfo.self, from: decryptedData) {
                     self.unknownMessageCount = 0
                     jobBasicInfo.lastUpdate = Date()
-                        self.jobList.updateValue(jobBasicInfo, forKey: jobBasicInfo.jobId)
-//                    DispatchQueue.main.async {
-//                        self.jobList.updateValue(jobBasicInfo, forKey: jobBasicInfo.jobId)
-//                    }
+                    self.jobList.updateValue(jobBasicInfo, forKey: jobBasicInfo.jobId)
+                    //                    DispatchQueue.main.async {
+                    //                        self.jobList.updateValue(jobBasicInfo, forKey: jobBasicInfo.jobId)
+                    //                    }
                 } else if let projectInfo = try? decoder.decode(ProjectInfoFromMQTT.self, from: decryptedData) {
                     // App should not receive this type of message
                     self.unknownMessageCount = 0
                     print("Receive ProjectInfo, will not do anything.")
-//                    DispatchQueue.main.async {
-//                        self.projectInfo = projectInfo
-//                    }
-//                    guard let activity = self.activity else { return }
-//                    let currentJob = self.jobList[projectInfo.currentJobId] ?? JobBasicInfo(jobId: UUID().uuidString, jobName: "No Job in List", timelineName: "Empty", jobStatus: .unknown, jobProgress: 0, estimatedTime: 0, timeTaken: 0, order: 0)
-//                    let projectInfoToWidget = ProjectInfoToWidget(readyJobNumber: projectInfo.readyJobNumber, failedJobNumber: projectInfo.failedJobNumber, finishJobNumber: projectInfo.finishJobNumber, isRendering: projectInfo.isRendering, lastUpdate: Date(), currentJobId: currentJob.jobId, currentJobName: currentJob.jobName, currentTimelineName: currentJob.timelineName, currentJobStatus: currentJob.jobStatus, currentJobProgress: currentJob.jobProgress, currentJobDurationString: currentJob.formatedJobDuration(rendering: projectInfo.isRendering))
-//                    if activity.content.state.isRendering == true && projectInfoToWidget.isRendering == false {
-//                        Task {
-//                            let content = UNMutableNotificationContent()
-//                            content.title = "\(project.name ?? "Unknown Project") 已结束渲染！"
-//                            content.subtitle = "点击查看详情"
-//                            content.sound = .default
-//                            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
-//                            
-//                            try? await UNUserNotificationCenter.current().add(request)
-//                            
-//                            await activity.end(
-//                                ActivityContent<iLoveTranscodeWidgetAttributes.ContentState>(
-//                                    state: projectInfoToWidget,
-//                                    staleDate: nil
-//                                )
-//                            )
-//                        }
-//                    } else {
-//                        var alertConfig: AlertConfiguration? = nil
-//                        
-//                        if activity.content.state.currentJobId != projectInfoToWidget.currentJobId {
-//                            alertConfig = AlertConfiguration(
-//                                title: "\(project.name ?? "Unknown Project") 已开始渲染下一个任务",
-//                                body: "当前任务：\(projectInfoToWidget.currentJobName)",
-//                                sound: .default
-//                            )
-//                        }
-//                        
-//                        Task {
-//                            await activity.update(
-//                                ActivityContent<iLoveTranscodeWidgetAttributes.ContentState>(
-//                                    state: projectInfoToWidget,
-//                                    staleDate: nil
-//                                ),
-//                                alertConfiguration: alertConfig
-//                            )
-//                        }
-//                    }
+                    /*
+                     //                    DispatchQueue.main.async {
+                     //                        self.projectInfo = projectInfo
+                     //                    }
+                     //                    guard let activity = self.activity else { return }
+                     //                    let currentJob = self.jobList[projectInfo.currentJobId] ?? JobBasicInfo(jobId: UUID().uuidString, jobName: "No Job in List", timelineName: "Empty", jobStatus: .unknown, jobProgress: 0, estimatedTime: 0, timeTaken: 0, order: 0)
+                     //                    let projectInfoToWidget = ProjectInfoToWidget(readyJobNumber: projectInfo.readyJobNumber, failedJobNumber: projectInfo.failedJobNumber, finishJobNumber: projectInfo.finishJobNumber, isRendering: projectInfo.isRendering, lastUpdate: Date(), currentJobId: currentJob.jobId, currentJobName: currentJob.jobName, currentTimelineName: currentJob.timelineName, currentJobStatus: currentJob.jobStatus, currentJobProgress: currentJob.jobProgress, currentJobDurationString: currentJob.formatedJobDuration(rendering: projectInfo.isRendering))
+                     //                    if activity.content.state.isRendering == true && projectInfoToWidget.isRendering == false {
+                     //                        Task {
+                     //                            let content = UNMutableNotificationContent()
+                     //                            content.title = "\(project.name ?? "Unknown Project") 已结束渲染！"
+                     //                            content.subtitle = "点击查看详情"
+                     //                            content.sound = .default
+                     //                            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
+                     //
+                     //                            try? await UNUserNotificationCenter.current().add(request)
+                     //
+                     //                            await activity.end(
+                     //                                ActivityContent<iLoveTranscodeWidgetAttributes.ContentState>(
+                     //                                    state: projectInfoToWidget,
+                     //                                    staleDate: nil
+                     //                                )
+                     //                            )
+                     //                        }
+                     //                    } else {
+                     //                        var alertConfig: AlertConfiguration? = nil
+                     //
+                     //                        if activity.content.state.currentJobId != projectInfoToWidget.currentJobId {
+                     //                            alertConfig = AlertConfiguration(
+                     //                                title: "\(project.name ?? "Unknown Project") 已开始渲染下一个任务",
+                     //                                body: "当前任务：\(projectInfoToWidget.currentJobName)",
+                     //                                sound: .default
+                     //                            )
+                     //                        }
+                     //
+                     //                        Task {
+                     //                            await activity.update(
+                     //                                ActivityContent<iLoveTranscodeWidgetAttributes.ContentState>(
+                     //                                    state: projectInfoToWidget,
+                     //                                    staleDate: nil
+                     //                                ),
+                     //                                alertConfiguration: alertConfig
+                     //                            )
+                     //                        }
+                     //                    }
+                     */
+                } else if let removeJob = try? decoder.decode(RemoveJobInfo.self, from: decryptedData) {
+                    self.jobList.removeValue(forKey: removeJob.removedJobId)
                 } else if let jobDetails = try? decoder.decode(JobDetails.self, from: decryptedData) {
                     self.unknownMessageCount = 0
                     guard jobDetails.jobId == self.selectedJobDetailId.suffix(4) else {
@@ -172,12 +176,23 @@ extension ProjectDetailView {
             _ = mqtt5.connect()
         }
         
+        func removeAllJobInList() {
+            jobList.removeAll()
+        }
+        
         func requestForDetails(of jobId: String) {
             guard let mqtt5 = mqtt5 else { return }
             jobDetails = nil
             let publishProperties = MqttPublishProperties()
             publishProperties.contentType = "String"
             mqtt5.publish("\(project?.topicAddress ?? "unknown")/inverse", withString: "req@\(jobId)".encrypt(), properties: publishProperties)
+        }
+        
+        func requestStartRender(for jobId: String) {
+            guard let mqtt5 = mqtt5 else { return }
+            let publishProperties = MqttPublishProperties()
+            publishProperties.contentType = "String"
+            mqtt5.publish("\(project?.topicAddress ?? "unknown")/inverse", withString: "srn@\(jobId)".encrypt(), properties: publishProperties)
         }
         
         func start() {
@@ -211,9 +226,7 @@ extension ProjectDetailView {
                     Task {
                         for await data in activity.pushTokenUpdates {
                             let myToken = data.map {String(format: "%02x", $0)}.joined()
-                            // Keep this myToken for sending push notifications
-                            print("Activity Token is: \(myToken)")
-                            //Send device token
+                            //Send live activity token
                             print(ParametersInMemory.shared.pushNotificationToken ?? "No Token")
                             guard let mqtt5 = self.mqtt5,
                                   myToken.count > 0
@@ -289,7 +302,7 @@ extension ProjectDetailView {
             case .failure(let error):
                 print("Scanning failed: \(error.localizedDescription)")
             }
-           // more code to come
+            // more code to come
         }
         
     }
