@@ -85,6 +85,11 @@ extension ProjectDetailView {
                 let publishProperties = MqttPublishProperties()
                 publishProperties.contentType = "String"
                 mqtt5.publish("\(self.project?.topicAddress ?? "unknown")/inverse", withString: "dtk@\(token)".encrypt(), properties: publishProperties)
+                #if DEBUG
+                mqtt5.publish("\(project.topicAddress ?? "unknown")/inverse", withString: "env@debug".encrypt(), properties: publishProperties)
+                #else
+                mqtt5.publish("\(project.topicAddress ?? "unknown")/inverse", withString: "env@release".encrypt(), properties: publishProperties)
+                #endif
             }
             
             mqtt5.didConnectAck = { mqtt, reason, ack in
