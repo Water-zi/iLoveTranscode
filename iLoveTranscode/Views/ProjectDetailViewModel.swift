@@ -77,14 +77,9 @@ extension ProjectDetailView {
             mqtt5.didSubscribeTopics = { mqtt, dict, topics, ack in
                 print("did sub \(dict.allKeys)")
                 self.didConnectToMQTT = true
-                //Send device token
-                print(ParametersInMemory.shared.pushNotificationToken ?? "No Token")
-                guard let mqtt5 = self.mqtt5,
-                      let token = ParametersInMemory.shared.pushNotificationToken
-                else { return }
+                self.sendDeviceToken()
                 let publishProperties = MqttPublishProperties()
                 publishProperties.contentType = "String"
-                mqtt5.publish("\(self.project?.topicAddress ?? "unknown")/inverse", withString: "dtk@\(token)".encrypt(), properties: publishProperties)
                 #if DEBUG
                 mqtt5.publish("\(project.topicAddress ?? "unknown")/inverse", withString: "env@debug".encrypt(), properties: publishProperties)
                 #else
@@ -179,6 +174,17 @@ extension ProjectDetailView {
             }
             
             _ = mqtt5.connect()
+        }
+        
+        func sendDeviceToken() {
+            //Send device token
+            print(ParametersInMemory.shared.pushNotificationToken ?? "No Token")
+            guard let mqtt5 = self.mqtt5,
+                  let token = ParametersInMemory.shared.pushNotificationToken
+            else { return }
+            let publishProperties = MqttPublishProperties()
+            publishProperties.contentType = "String"
+            mqtt5.publish("\(self.project?.topicAddress ?? "unknown")/inverse", withString: "dtk@\(token)".encrypt(), properties: publishProperties)
         }
         
         func removeAllJobInList() {

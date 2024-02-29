@@ -108,6 +108,7 @@ struct ProjectDetailView: View {
             .refreshable {
                 viewModel.didReceiveMessageFromMQTT = false
                 viewModel.removeAllJobInList()
+                viewModel.sendDeviceToken()
             }
             .animation(.easeInOut, value: viewModel.jobList)
             .task {
